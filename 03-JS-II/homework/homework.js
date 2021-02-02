@@ -58,20 +58,20 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   switch (color) { // verificar no pasa test
-    case 'blue': 
-    console.log("This is blue")
+    case "blue": 
+    return ("This is blue")
     
-    case 'red': 
-    console.log("This is red")
+    case "red": 
+    return ("This is red")
     
-    case 'green':
-      console.log("This is green")
+    case "green":
+      return ("This is green")
     
-    case 'orange':
-      console.log("This is orange")
+    case "orange":
+      return ("This is orange")
     
     default : 
-    console.log("Color not found")
+    return ("Color not found")
       break;
   }
 }
