@@ -57,7 +57,7 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-  switch (color) {
+  switch (color) { // verificar no pasa test
     case 'blue': 
     console.log("This is blue")
     
