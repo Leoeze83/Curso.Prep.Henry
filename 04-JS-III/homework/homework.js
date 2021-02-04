@@ -90,11 +90,12 @@ function promedioResultadosTest(resultadosTest) {
   return promedio;
 }
 
-
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var maximo = Math.max(...numeros);// usando: el spread operator, los ("..."): hacen referencia a todo lo que contiene el array.
+  return maximo; 
 }
 
 
@@ -102,6 +103,13 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  
+  if (!arguments.length){
+    return 0;
+    } else if(arguments.length == 1){
+       return arguments;
+    } 
+    // no logro hacer la multiplicacion de los elementos del array (arguments)
 }
 
 
