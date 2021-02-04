@@ -195,7 +195,7 @@ function doWhile(numero) {
  do {
   result = (i + 5)
   i = result
-} while (result < ((numero * 8) +5)); // cual seria la condicion para frenar a 8 veces?
+} while (); // cual seria la condicion para frenar a 8 veces?
  return i;
 } 
 
