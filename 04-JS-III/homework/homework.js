@@ -65,6 +65,9 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  if ( array.includes(elemento)){
+    return true;
+  }return false;
 }
 
 
@@ -72,13 +75,19 @@ function agregarNumeros(numeros) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var array= numeros.reduce(function(a,b){return a +b});
+  return array;
 }
+
 
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var suma= resultadosTest.reduce((a,b) => (a +b)); // esta sintaxis es igual a: resultadosTest.reduce(function(a,b){return (a +b)})
+  var promedio = suma / resultadosTest.length;
+  return promedio;
 }
 
 
