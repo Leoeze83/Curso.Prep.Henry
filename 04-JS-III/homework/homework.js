@@ -103,13 +103,16 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  
+  let producto = 0;
   if (!arguments.length){
     return 0;                                   //VER......
     } else if(arguments.length == 1){
        return arguments;
     } 
-    // no logro hacer la multiplicacion de los elementos del array (arguments)
+    arguments.array.forEach(element => {
+producto*=element;
+    }); 
+    return producto;    // no logro hacer la multiplicacion de los elementos del array (arguments)
 }
 
 
@@ -138,7 +141,6 @@ function diaDeLaSemana(numeroDeDia) {
   
 } 
 
-
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
@@ -161,22 +163,16 @@ if( newArray[0] === "9"){
 
 }
 
-
-  
-
-
-
 function mesesDelAño(array) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
 var newArray= [];
-array.forEach(element => {
-  (element == "Enero" && element =="Marzo" && element == "Noviembre");  //ver.....
-    newArray.push(element);
-  return newArray;
-});
+if(array.hasOwnProperty("Enero" && "Marzo"&& "Noviembre")) {
+      newArray.push();
+            return newArray;
+}
 return "No se encontraron los meses pedidos"
 }
 
