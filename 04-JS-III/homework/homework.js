@@ -154,15 +154,6 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí
-  var valor = [...arreglo.values()];
-  for (let i = 0; i < arreglo.length; i++) {
-    for (let j = 0; j < valor.length; j++) {
-      if (valor[j] === arreglo[i]) {
-        return true;
-      }
-    }
-    return false;
-  }
 }
 
 function mesesDelAño(array) {
@@ -171,13 +162,16 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   var newArray = [];
-  if (array.hasOwnProperty("Enero" && "Marzo" && "Noviembre")) {
-    newArray.push();
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === "Enero") newArray.push(array[i]);
+    else if (array[i] === "Marzo") newArray.push(array[i]);
+    else if (array[i] === "Noviembre") newArray.push(array[i]);
+    else {
+      return "No se encontraron los meses pedidos";
+    }
     return newArray;
   }
-  return "No se encontraron los meses pedidos";
 }
-
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
