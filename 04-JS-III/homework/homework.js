@@ -153,7 +153,11 @@ function empiezaConNueve(n) {
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí         // VER ....
+  //Escribe tu código aquí
+  if (arreglo.every === arreglo[0]) {
+    return true; // VER ....
+  }
+  return false;
 }
 
 function mesesDelAño(array) {
