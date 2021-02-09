@@ -163,15 +163,26 @@ function mesesDelAño(array) {
   // Tu código:
   var newArray = [];
   for (var i = 0; i < array.length; i++) {
-    if (array[i] === "Enero") newArray.push(array[i]);
-    else if (array[i] === "Marzo") newArray.push(array[i]);
-    else if (array[i] === "Noviembre") newArray.push(array[i]);
-    else {
-      return "No se encontraron los meses pedidos";
+    var temp = array[i];
+    switch (temp) {
+      case "Enero":
+        newArray.push(array[i]);
+        break;
+      case "Marzo":
+        newArray.push(array[i]);
+        break;
+      case "Noviembre":
+        newArray.push(array[i]);
+        break;
+      default:
+        break;
     }
-    return newArray;
   }
+  if (newArray.includes("Enero" && "Marzo" && "Noviembre")) {
+    return newArray;
+  } else return "No se encontraron los meses pedidos";
 }
+
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
