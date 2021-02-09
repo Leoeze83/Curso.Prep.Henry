@@ -98,7 +98,6 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 
-  // no logro hacer la multiplicacion de los elementos del array (arguments)......................................
   var resultado = 1;
   if (!arguments.length) {
     return 0;
@@ -155,10 +154,15 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí
-  if (arreglo.every === arreglo[0]) {
-    return true; // VER ....
+  var valor = [...arreglo.values()];
+  for (let i = 0; i < arreglo.length; i++) {
+    for (let j = 0; j < valor.length; j++) {
+      if (valor[j] === arreglo[i]) {
+        return true;
+      }
+    }
+    return false;
   }
-  return false;
 }
 
 function mesesDelAño(array) {
