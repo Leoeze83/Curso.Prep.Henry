@@ -185,6 +185,19 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var contador = 1;
+  let resultado = [];
+  let suma = numero;
+  while (contador <= 10) {
+    suma += 2;
+    resultado.push(suma);
+    if (suma === contador) {
+      return "Se interrumpió la ejecución";
+      break;
+    }
+    contador++;
+  }
+  return resultado;
 }
 
 function continueStatement(numero) {
@@ -194,8 +207,19 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var contador = 1;
+  let resultado = [];
+  let suma = numero;
+  while (contador <= 10) {
+    suma += 2;
+    resultado.push(suma);
+    if (contador == 5) {
+      continue;
+    }
+    contador++;
+  }
+  return resultado;
 }
-
 // No modificar nada debajo de esta línea
 // --------------------------------
 
