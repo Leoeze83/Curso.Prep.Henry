@@ -211,15 +211,16 @@ function continueStatement(numero) {
   let resultado = [];
   let suma = numero;
   while (contador <= 10) {
-    suma += 2;
-    resultado.push(suma);
+    contador++;
     if (contador == 5) {
       continue;
     }
-    contador++;
+    suma += 2;
+    resultado.push(suma);
   }
   return resultado;
 }
+
 // No modificar nada debajo de esta línea
 // --------------------------------
 
