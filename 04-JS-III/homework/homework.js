@@ -98,17 +98,18 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 
+  // no logro hacer la multiplicacion de los elementos del array (arguments)......................................
+  var resultado = 1;
   if (!arguments.length) {
     return 0;
   } else if (arguments.length == 1) {
-    return arguments;
-  }
-  let resultado = arguments.reduce(function (acumulador, valorActual) {
-    acumulador = acumulador * valorActual;
-    resultado = acumulador;
+    return arguments[0];
+  } else {
+    for (const i of arguments) {
+      resultado *= i;
+    }
     return resultado;
-  });
-  // no logro hacer la multiplicacion de los elementos del array (arguments)
+  }
 }
 
 function cuentoElementos(arreglo) {
